@@ -1,0 +1,62 @@
+.container{
+    display: flex;
+   flex-direction: column;
+   text-align: center;
+
+   span{
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+   }
+
+   img{
+    width: 20px;
+   }
+}
+
+.skillList{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    max-width: 26ch;
+      transition: transform 200ms ease-in-out;
+}
+
+.skillList:hover{
+
+      box-shadow: 2px 2px 3px 3px #4396e8;
+    padding: 3rem;
+   transform: scale(1.05);
+}
+
+
+hr{
+
+    width: 100px;
+    height: 1px;
+    border: none;
+    background-color: var(--text-color);
+    margin: 40px auto;
+}
+
+@media(width>=800px){
+
+    .skillList{
+        max-width: fit-content;
+        gap: 30px;
+
+        p{
+            font-size: 20px;
+        }
+    
+    }    
+    
+   
+    hr{
+        width: 300px;
+    }
+}
