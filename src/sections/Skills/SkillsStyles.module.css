@@ -23,14 +23,15 @@
     flex-wrap: wrap;
     row-gap: 40px;
     max-width: 26ch;
-      transition: transform 200ms ease-in-out;
+    padding: 2rem;
+    
 }
-
+ 
 .skillList:hover{
 
       box-shadow: 2px 2px 3px 3px #4396e8;
-    padding: 3rem;
-   transform: scale(1.05);
+    
+    
 }
 
 

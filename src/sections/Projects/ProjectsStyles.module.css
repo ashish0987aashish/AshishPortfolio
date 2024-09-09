@@ -33,14 +33,12 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
-     transition: transform 200ms ease-out;
+    padding: 2rem;
 }
 
 .projectsContainer:hover{
 
     box-shadow: 2px 2px 3px 3px #4396e8;
-    padding: 3rem;
-   transform: scale(1.05); 
 }
 
 @media(width>=800px){

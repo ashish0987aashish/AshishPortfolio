@@ -11,16 +11,10 @@
     .hero{
 
         max-width: 200px;
-          transition: transform 200ms ease-in-out;
        
     }
 
-   .hero:hover{
-     box-shadow: 2px 2px 3px 3px #4396e8;
-    
-     transform: scaleX(1.05) scaleY(1.05);
-   }
-
+  
 
     span{
        display: flex;
@@ -67,6 +61,8 @@
 
     }
 }
+
+
 
 
 .colorModeContainer{
@@ -127,5 +123,7 @@
    
     
 }
+
+
 
 
