@@ -1,63 +1,63 @@
-.container{
-    display: flex;
-   flex-direction: column;
-   text-align: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
-   span{
-
+  span {
     display: flex;
     align-items: center;
     gap: 5px;
-   }
+  }
 
-   img{
+  img {
     width: 20px;
-   }
+  }
 }
 
-.skillList{
+.skillList {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  max-width: 26ch;
+  padding: 2rem;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-self: center;
-    flex-wrap: wrap;
-    row-gap: 40px;
-    max-width: 26ch;
-    padding: 2rem;
-    
-}
- 
-.skillList:hover{
+  p {
+    transition: transform 200ms ease-in-out;
+  }
 
-      box-shadow: 2px 2px 3px 3px #4396e8;
-    
-    
-}
+  p:hover {
+    transform: scale(1.2);
+  
+    cursor: pointer;
 
-
-hr{
-
-    width: 100px;
-    height: 1px;
-    border: none;
-    background-color: var(--text-color);
-    margin: 40px auto;
+  }
 }
 
-@media(width>=800px){
+.skillList:hover {
+  box-shadow: 2px 2px 3px 3px #4396e8;
+}
 
-    .skillList{
-        max-width: fit-content;
-        gap: 30px;
+hr {
+  width: 100px;
+  height: 1px;
+  border: none;
+  background-color: var(--text-color);
+  margin: 40px auto;
+}
 
-        p{
-            font-size: 20px;
-        }
-    
-    }    
-    
-   
-    hr{
-        width: 300px;
+@media (width>=800px) {
+  .skillList {
+    max-width: fit-content;
+    gap: 30px;
+
+    p {
+      font-size: 20px;
     }
+  }
+
+  hr {
+    width: 300px;
+  }
 }
