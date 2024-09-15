@@ -7,7 +7,19 @@ const Contact = () => {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
-    const onSubmit= () =>{
+    const onSubmit= async() =>{
+
+      e.preventDefault();
+
+     
+        await fetch('https://formspree.io/f/manwkpyj', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, message }),
+    });
+
 
         setEmail("")
         setName("")
