@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './ContactStyles.module.css'
 
 const Contact = () => {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    const onSubmit= () =>{
+
+        setEmail("")
+        setName("")
+        setMessage("")
+    }
+
+  
+
+
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
@@ -11,6 +26,8 @@ const Contact = () => {
             Name
           </label>
           <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             type="text"
             name="name"
             id="name"
@@ -24,6 +41,8 @@ const Contact = () => {
             Email
           </label>
           <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
             name="email"
             id="email"
@@ -37,6 +56,9 @@ const Contact = () => {
             Message
           </label>
           <textarea
+
+             value={message}
+            onChange={(e)=>setMessage(e.target.value)}
             name="message"
             id="message"
             placeholder="Message"
@@ -44,7 +66,7 @@ const Contact = () => {
           ></textarea>
         </div>
 
-        <input className="hover btn" type="submit" value="Submit" />
+        <input onClick={onSubmit} className="hover btn" type="submit" value="Submit" />
       </form>
     </section>
   );
