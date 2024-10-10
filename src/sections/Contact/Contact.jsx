@@ -6,39 +6,11 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const onSubmit = async (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
-
-    // Submit the form data using Formspree
-    try {
-      const response = await fetch("https://formspree.io/f/manwkpyj", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      if (response.ok) {
-        // Clear the form fields if submission is successful
-        setName("");
-        setEmail("");
-        setMessage("");
-        alert("Message sent successfully!");
-      } else {
-        // Handle server errors or issues
-        alert("There was a problem sending the message.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("There was an error sending the message.");
-    }
-  };
-
+ 
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
-      <form onSubmit={onSubmit}>
+      <form action="https://formspree.io/f/manwkpyj" method="post">
         <div className="formGroup">
           <label htmlFor="name" hidden>
             Name
